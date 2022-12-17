@@ -1,0 +1,27 @@
+<div class="container">
+  <button type="button" (click)="setHabilitar()" class="btn btn-primary my-3">
+    {{ habilitar == true ? "Ocultar" : "Mostrar" }}
+  </button>
+
+  <div class="card" *ngIf="habilitar">
+    <div class="card-header">Listado de Productos</div>
+    <div class="card-body">
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let curso of listaProductos, let indice=index">
+          Curso: {{ curso }}
+          <button (click)="borrarCurso(indice)">Eliminar</button>
+        </li>
+      </ul>
+    </div>
+    <div>
+        <p>Añadir un item a la lista</p>
+        <input type="text" [(ngModel)]="textForm" (keyup)="mostrarTexto()">
+        <button (click)="getTexto()">Mostrar Cursos</button>
+        <button (click)="addTexto()">Añadir Cursos</button>
+    </div>
+  </div>
+
+  <div class="card" *ngIf="!habilitar">
+    <div class="card-header">No hay cursos disponibles</div>
+  </div>
+</div>

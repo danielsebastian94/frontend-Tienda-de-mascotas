@@ -1,0 +1,16 @@
+<div class="body">
+    <div class="login">
+        <img src="https://img.freepik.com/vector-premium/logotipo-tienda-mascotas-perros-gatos_9645-750.jpg?w=2000" style="height: 100px;">
+        <form  [formGroup]="formLogin" (ngSubmit)="ingresar()">
+            <mat-form-field class="ancho" appearance="fill">
+                <mat-label>Usuario</mat-label>
+                <input type="text" matInput #input autocomplete="off" formControlName="username" placeholder="username">
+            </mat-form-field>
+            <mat-form-field class="ancho" appearance="fill">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput #input autocomplete="off" formControlName="password" placeholder="password">
+            </mat-form-field>
+            <button type="submit" class="ancho button" mat-raised-button color="primary" [disabled]="formLogin.invalid">Ingresar</button>
+        </form>
+    </div>
+</div>

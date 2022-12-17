@@ -1,0 +1,6 @@
+<h3> {{ contador }}</h3>
+<button type="button" class="btn btn-primary" (click)="multiplicar()"> multiplicar </button>
+<button type="button" class="btn btn-info" (click)="dividir()"> dividir </button>
+
+<hr>
+<app-contador-nieto [contador]="contador" (cambioContador)="resetearnew($event)"></app-contador-nieto>
