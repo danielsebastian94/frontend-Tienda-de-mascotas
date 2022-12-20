@@ -10,7 +10,10 @@
                 <mat-label>Password</mat-label>
                 <input type="password" matInput #input autocomplete="off" formControlName="password" placeholder="password">
             </mat-form-field>
-            <button type="submit" class="ancho button" mat-raised-button color="primary" [disabled]="formLogin.invalid">Ingresar</button>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button type="submit" class="ancho button" class="btn btn-primary me-md-2" [disabled]="formLogin.invalid">Ingresar</button>     
+            <button type="submit" class="ancho button" class="btn btn-primary me-md-2" [disabled]="formLogin.invalid">Registrarse</button>
+        </div>
         </form>
     </div>
 </div>

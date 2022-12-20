@@ -35,9 +35,9 @@ export class ClientesComponent implements OnInit, AfterViewInit {
     );
     this.cliente2 = {
       id: 2,
-      nombre: 'Fernando',
-      apellido: 'Galindez',
-      email: 'fernando@gmail.com',
+      nombre: 'Carolina',
+      apellido: 'Ceballos',
+      email: 'caritoc@gmail.com',
       createAt: '2022-12-09',
       foto: '',
     };
